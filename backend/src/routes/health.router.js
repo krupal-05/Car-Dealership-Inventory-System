@@ -1,12 +1,12 @@
-import { Router } from "express";
+import { Router } from 'express';
 
 const router = Router();
 
-router.get("/", (req, res) => {
-    res.status(200).json({
-        success: true,
-        message: "Car Dealership Inventory API is running",
-    });
+router.get('/api/health', (req, res) => {
+  res.status(200).json({
+    status: 'UP',
+    message: 'Car Dealership Inventory API is running healthy',
+  });
 });
 
 export default router;

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   testEnvironment: 'node',
   testMatch: ['**/src/tests/**/*.test.js'],
   verbose: true,
@@ -7,4 +7,5 @@ module.exports = {
   clearMocks: true,
   resetMocks: true,
   restoreMocks: true,
+  transform: {}
 };
