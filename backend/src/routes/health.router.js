@@ -1,12 +1,12 @@
-import { Router } from "express";
+const express = require("express");
 
-const router = Router();
+const router = express.Router();
 
-router.get("/", (req,res)=>{
+router.get("/", (req, res) => {
     res.status(200).json({
-        status:"UP",
-        message:"Health check successful"
-    })
-})
+        success: true,
+        message: "Car Dealership Inventory API is running",
+    });
+});
 
-export default router
+module.exports = router;

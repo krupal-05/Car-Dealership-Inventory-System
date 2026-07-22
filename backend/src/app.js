@@ -1,18 +1,15 @@
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
+
+const healthRoutes = require("./routes/health.routes");
 
 const app = express();
 
-// Core Middlewares
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Health Check Route
-app.get('/api/health', (req, res) => {
-  res.status(200).json({
-    status: 'UP',
-    message: 'Car Dealership Inventory API is running healthy',
-  });
-});
+// Routes
+app.use("/", healthRoutes);
 
 module.exports = app;
